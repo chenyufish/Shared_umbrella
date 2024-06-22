@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "application.yml",
+      "type": "com.fishman.config.DruidConfig",
+      "sourceType": "com.fishman.config.DruidConfig"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.fishman.config.DruidConfig",
+      "sourceMethod": "druidDataSource()"
+    },
+    {
+      "name": "spring.redis",
+      "type": "com.fishman.config.RedissonConfig",
+      "sourceType": "com.fishman.config.RedissonConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.redis.host",
+      "type": "java.lang.String",
+      "sourceType": "com.fishman.config.RedissonConfig"
+    },
+    {
+      "name": "spring.redis.port",
+      "type": "java.lang.String",
+      "sourceType": "com.fishman.config.RedissonConfig"
+    }
+  ],
+  "hints": []
+}
