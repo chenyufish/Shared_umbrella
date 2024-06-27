@@ -1,7 +1,7 @@
-D:\桌面\Project\software-project-back\src\test\java\com\ning\config\DruidConfigTest.java
-D:\桌面\Project\software-project-back\src\test\java\com\ning\utils\JWTUtilTest.java
-D:\桌面\Project\software-project-back\src\test\java\com\ning\SoftwareProjectApplicationTests.java
-D:\桌面\Project\software-project-back\src\test\java\com\ning\mapper\GoodsMapperTest.java
-D:\桌面\Project\software-project-back\src\test\java\com\ning\service\GoodsServiceTest.java
-D:\桌面\Project\software-project-back\src\test\java\com\ning\service\UserServiceTest.java
-D:\桌面\Project\software-project-back\src\test\java\com\ning\mapper\CurrentUserMapperTest.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\mapper\GoodsMapperTest.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\config\DruidConfigTest.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\utils\JWTUtilTest.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\service\GoodsServiceTest.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\service\UserServiceTest.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\SoftwareProjectApplicationTests.java
+G:\java_projects\IDEA_projects\雨伞共享租借系统\Shared_umbrella\software-project-back\src\test\java\com\fishman\mapper\CurrentUserMapperTest.java

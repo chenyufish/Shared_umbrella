@@ -1,0 +1,7 @@
+com\fishman\utils\JWTUtilTest.class
+com\fishman\service\UserServiceTest.class
+com\fishman\mapper\CurrentUserMapperTest.class
+com\fishman\service\GoodsServiceTest.class
+com\fishman\mapper\GoodsMapperTest.class
+com\fishman\config\DruidConfigTest.class
+com\fishman\SoftwareProjectApplicationTests.class

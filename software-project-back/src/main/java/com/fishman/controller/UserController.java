@@ -47,7 +47,6 @@ public class UserController {
             @ApiImplicitParam(name = "email",value = "用户登录时需要输入的邮箱"),
             @ApiImplicitParam(name = "password",value = "用户登录时需要输入的密码")
     })
-    @CrossOrigin
     public Map<String,Object> login(
             @RequestParam("email") String email,
             @RequestParam("password") String password)

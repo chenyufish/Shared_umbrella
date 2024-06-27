@@ -1,11 +1,15 @@
 package com.fishman.service;
 
+
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.fishman.model.entity.Order;
 import com.fishman.mapper.OrderMapper;
+import com.fishman.model.entity.Order;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,13 +19,15 @@ import java.util.List;
  * ClassName: OrderService <br/>
  *
  * @author fishman
- * @date 2023/6/7 0007
+ * @date 2024/6/7 0007
  * 
  */
 @Service
 @Transactional(rollbackFor = Exception.class)
 public class OrderService {
     private final OrderMapper orderMapper;
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     public OrderService(OrderMapper orderMapper) {
         this.orderMapper = orderMapper;
@@ -46,16 +52,6 @@ public class OrderService {
         return orderMapper.selectList(wp);
     }
 
-    /**
-     * 依据卖家ID 查询对应的订单
-     * @param sId
-     * @return
-     */
-    public List<Order> queryAllBySid(int sId){
-        QueryWrapper<Order> wp = new QueryWrapper<>();
-        wp.eq("sId",sId);
-        return orderMapper.selectList(wp);
-    }
 
     /**
      * 依据卖家ID查询对应的订单
@@ -68,15 +64,14 @@ public class OrderService {
         return orderMapper.selectList(wp);
     }
 
-    public IPage<Order> search(Order order,int offset,int limit){
+    public IPage<Order> search(Order order, int offset, int limit){
         Page<Order> orderPage = new Page<>(offset, limit);
         QueryWrapper<Order> wp = new QueryWrapper<>();
-        wp.like("sId",order.getSId()==null?"":order.getSId());
         if(order.getDStatue() != null){
             wp.eq("dStatue",order.getDStatue());
         }
         wp.eq("bId",order.getBId());
-        wp.like("dId",order.getDId() == null? "":order.getDId());
+        wp.like("dId",order.getDId());
         return orderMapper.selectPage(orderPage,wp);
     }
 
@@ -86,7 +81,6 @@ public class OrderService {
 
         QueryWrapper<Order> wp = new QueryWrapper<>();
         wp.eq("dStatue",order.getDStatue());
-        wp.eq("sId",order.getSId());
         return orderMapper.selectList(wp);
     }
 
@@ -107,6 +101,9 @@ public class OrderService {
     public int add(Order order){
         return orderMapper.insert(order);
     }
+
+
+
 
 
 }

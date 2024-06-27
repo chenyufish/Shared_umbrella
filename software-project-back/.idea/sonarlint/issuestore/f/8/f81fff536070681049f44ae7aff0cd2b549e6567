@@ -1,0 +1,17 @@
+
+l
+java:S1192D"VDefine a constant instead of duplicating this literal "æœåŠ¡å™¨å¤„ç†å¼‚å¸¸" 6 times.(†˜ê•
+o
+java:S1192†"SDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒå¤±è´¥" 4 times.(Ë…Ï‡ùÿÿÿÿ
+q
+java:S1192@"VDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒæœªé€šè¿‡" 3 times.(åù«ëÿÿÿÿÿ
+Q
+java:S1854˜"5Remove this useless assignment to local variable "i".(…ÚÇşÿÿÿÿ
+B
+java:S1481˜"&Remove this unused "i" local variable.(…ÚÇşÿÿÿÿ
+4
+java:S2119½"Save and re-use this "Random".(¼İÅf
+Q
+java:S1854ô"5Remove this useless assignment to local variable "i".(©øñ¡şÿÿÿÿ
+B
+java:S1481ô"&Remove this unused "i" local variable.(©øñ¡şÿÿÿÿ

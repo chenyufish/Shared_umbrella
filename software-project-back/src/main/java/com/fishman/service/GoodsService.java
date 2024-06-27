@@ -9,7 +9,10 @@ import com.fishman.mapper.GoodsMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * ClassName: GoodsService <br/>
@@ -31,7 +34,7 @@ public class GoodsService {
      * 查询所有商品
      * @return 查询到的商品集合
      */
-    public List<Goods> queryGoods(){
+    public  List<Goods> queryGoods(){
         return goodsMapper.selectList(null);
     }
 
@@ -75,8 +78,8 @@ public class GoodsService {
         wp.like("gName",goods.getGName()==null?"":goods.getGName());
         wp.like("gPrice",goods.getGPrice()==null?"":goods.getGPrice());
         wp.like("gContent",goods.getGContent()==null?"":goods.getGContent());
-        if(goods.getUId() != null) {
-            wp.eq("uId", goods.getUId());
+        if(goods.getGId() != null) {
+            wp.eq("uId", goods.getGId());
         }
 
 
@@ -116,4 +119,19 @@ public class GoodsService {
         wp.eq("gId",gId);
         return goodsMapper.selectOne(wp);
     }
+    /**
+     * 根据 glevel 参数获取符合条件的商品ID列表
+     *
+     * @param glevel 商品等级
+     * @return 符合条件的商品ID列表
+     */
+    public List<Integer> getGoodsIdsByLevel(int glevel) {
+        List<Goods> goodsList = queryGoods(); // 假设这里获取所有商品列表
+        return goodsList.stream()
+                .filter(goods -> goods.getGLevel() == glevel)
+                .map(Goods::getGId)
+                .collect(Collectors.toList());
+    }
+
+
 }

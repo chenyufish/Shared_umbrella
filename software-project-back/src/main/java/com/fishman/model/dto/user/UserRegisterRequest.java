@@ -13,11 +13,17 @@ import java.io.Serializable;
 @Data
 public class UserRegisterRequest implements Serializable {
 
-    private static final long serialVersionUID = 3191241716373120793L;
+    private static final long serialVersionUID = 4117806912933978266L;
 
-    private String userAccount;
+    private String uNickname;
 
-    private String userPassword;
+    private String uEmail;
 
-    private String checkPassword;
+    private String uPhone;
+
+    private String uPassword;
+
+    private String uCheckPassword;
+
+    private String uAddress;
 }

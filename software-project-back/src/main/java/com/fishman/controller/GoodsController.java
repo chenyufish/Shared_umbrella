@@ -12,8 +12,10 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * ClassName: GoodsController <br/>
@@ -24,7 +26,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping(value = "/goods",produces = "application/json")
-@Api(value = "商品管理",tags = "商品管理接口")
+@Api(value = "雨伞管理",tags = "雨伞管理接口")
 public class GoodsController {
 
     private final GoodsService goodsService;
@@ -37,23 +39,31 @@ public class GoodsController {
     }
 
 
-    @ApiOperation(value = "查询所有商品",notes = "查询所有商品信息")
+    @ApiOperation(value = "查询所有雨伞", notes = "查询所有雨伞信息")
     @GetMapping("/all")
     @CrossOrigin
-    public Map<String,Object> queryAll()
-    {
-        try{
+    public Map<String, Object> queryAll() {
+        try {
             List<Goods> goods = goodsService.queryGoods();
-            return Message.queryMessage(goods,goods.size());
-        }catch (Exception e){
+
+            // 统计 ulevel 数量
+            Map<Integer, Long> ulevelCount = goods.stream()
+                    .collect(Collectors.groupingBy(Goods::getGLevel, Collectors.counting()));
+
+            // 构建返回数据
+            Map<String, Object> result = new HashMap<>();
+            result.put("goods", goods);
+            result.put("ulevelCount", ulevelCount);
+            return Message.queryMessage(result, goods.size());
+        } catch (Exception e) {
             e.printStackTrace();
             return Message.getMessage("服务器处理异常");
         }
     }
 
-    @ApiOperation(value = "商品查询",notes = "依据prompt对商品进行商品名的模糊查询")
+    @ApiOperation(value = "雨伞查询",notes = "依据prompt对雨伞进行雨伞名的模糊查询")
     @GetMapping("/search/{prompt}")
-    @ApiImplicitParam(name = "prompt",value = "依据商品名进行模糊搜索的关键字")
+    @ApiImplicitParam(name = "prompt",value = "依据雨伞名进行模糊搜索的关键字")
     @CrossOrigin
     public Map<String,Object> queryAll(
             @PathVariable String prompt)
@@ -67,10 +77,10 @@ public class GoodsController {
         }
     }
 
-    @ApiOperation(value = "搜索商品",notes = "带分页进行商品模糊搜索")
+    @ApiOperation(value = "搜索雨伞",notes = "带分页进行雨伞模糊搜索")
     @CrossOrigin
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "goods",value = "依据goods里的属性进行商品的模糊查询",dataType = "Goods(Object)"),
+            @ApiImplicitParam(name = "goods",value = "依据goods里的属性进行雨伞的模糊查询",dataType = "Goods(Object)"),
             @ApiImplicitParam(name = "page",value = "分页查询中要查看第几页",defaultValue = "1"),
             @ApiImplicitParam(name = "limit",value = "分页查询中每页显示的数量",defaultValue = "10" )
     })
@@ -90,8 +100,8 @@ public class GoodsController {
     }
 
     @CrossOrigin
-    @ApiOperation(value = "修改商品",notes = "修改商品信息")
-    @ApiImplicitParam(name = "goods",value = "商品的实例对象，由前端传入对象的对应属性")
+    @ApiOperation(value = "修改雨伞",notes = "修改雨伞信息")
+    @ApiImplicitParam(name = "goods",value = "雨伞的实例对象，由前端传入对象的对应属性")
     @PostMapping("/update")
     public Map<String, Object> updateGoods(
             @RequestParam(value = "token",defaultValue = "null") String token,
@@ -115,10 +125,10 @@ public class GoodsController {
         }
     }
 
-    @ApiOperation(value = "添加商品",notes = "添加一条商品记录")
+    @ApiOperation(value = "添加雨伞",notes = "添加一条雨伞记录")
     @PostMapping("/add")
     @CrossOrigin
-    @ApiImplicitParam(name = "goods",value = "商品的实例对象，由前端传入对象的对应属性")
+    @ApiImplicitParam(name = "umbrellas",value = "雨伞的实例对象，由前端传入对象的对应属性")
     public Map<String,Object> addGoods(
             @RequestParam String token,
             @ModelAttribute Goods goods)
@@ -140,7 +150,7 @@ public class GoodsController {
         }
     }
 
-    @ApiOperation(value = "删除商品",notes = "删除一条商品记录")
+    @ApiOperation(value = "删除雨伞",notes = "删除一条雨伞记录")
     @PostMapping("/delete")
     @CrossOrigin
     public Map<String, Object> deleteGoods(
@@ -172,7 +182,7 @@ public class GoodsController {
         try{
             if(currentUserService.verityToken(token)){
                 int delete = goodsService.delete(ids);
-                return Message.getMessage("成功删除"+delete+"条商品");
+                return Message.getMessage("成功删除"+delete+"条雨伞");
             }else{
                 return Message.getMessage("身份校验失败");
             }
@@ -181,5 +191,6 @@ public class GoodsController {
             return Message.getMessage("服务器处理异常");
         }
     }
+
 
 }

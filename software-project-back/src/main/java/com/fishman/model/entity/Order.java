@@ -9,14 +9,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 
 /**
  * ClassName: Order <br/>
  *
  * @author fishman
- * @date 2023/5/29 0029
- * 
+ * @date 2024/6/29
+ *
  */
 @Data
 @NoArgsConstructor
@@ -25,18 +26,21 @@ import java.sql.Timestamp;
 public class Order {
     @TableId(value = "dId",type = IdType.AUTO)
     private Integer dId;
+
     @TableField("dStatue")
     private Boolean dStatue;
+
     @TableField("dDate")
     private Timestamp dDate;
+
     @TableField("dAmount")
     private Double dAmount;
-    @TableField("sId")
-    private Integer sId;
+
     @TableField("gId")
     private Integer gId;
+
     @TableField("bId")
     private Integer bId;
-    @TableField("dCount")
-    private Integer dCount;
+
+
 }

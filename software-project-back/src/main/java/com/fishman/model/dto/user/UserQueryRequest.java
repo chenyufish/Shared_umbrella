@@ -1,6 +1,7 @@
 package com.fishman.model.dto.user;
 
-import com.fishman.fishmanBI.common.PageRequest;
+
+import com.fishman.common.PageRequest;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

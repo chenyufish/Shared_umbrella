@@ -8,6 +8,8 @@ import com.fishman.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * ClassName: UserService <br/>
  *
@@ -102,7 +104,5 @@ public class UserService {
     public int delete(User user){
         return userMapper.deleteById(user);
     }
-
-
 
 }
