@@ -35,7 +35,7 @@ spring:
     database: 0
     #修改redis的数据库，redis带有16个数据库
 
-# Druid后台监控的登录信息
+# 后台监控的登录信息
 loginAccount:
   username: admin
   password: admin
@@ -89,6 +89,6 @@ knife4j:
           - com.fishman.controller
 # Token生成
 token:
-  SECRET_KEY: nunusedgoodssystem
+  SECRET_KEY: fishman
   EXPIRATION_TIME: 864_000_000
 

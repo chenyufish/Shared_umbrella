@@ -1,0 +1,14 @@
+
+ˆ	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(¬çÕ8ëÒ½î‡2J$c8d812a8-51d1-4e95-a7a5-bc9cf74f81ec
+†	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(¨¥n8ªæÅî‡2J$3039d6e7-f345-479b-9b67-54102137eb21
+ˆ	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(òŸ÷8ªæÅî‡2J$401abb9b-bb57-4c71-ad03-7d3e4aebce2f
+ˆ	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(ÜÑÆ€8ş¨Çî‡2J$a677a30d-2ae0-4c50-9115-8f1b28f6a5d8
+š
+java:S1192"VDefine a constant instead of duplicating this literal "æœåŠ¡å™¨å¤„ç†å¼‚å¸¸" 5 times.(†˜ê•8ÌÏ§î‡2J$9df8b0fe-cd75-4d8a-a6c3-08ee798c126d
+r	java:S106X"+Replace this use of System.out by a logger.(î¸ıÿÿÿÿ8ãÏ§î‡2J$366f7269-297e-4255-b2a7-0a8e07e99051
+r	java:S106e"+Replace this use of System.out by a logger.(ıßŠØşÿÿÿÿ8äÏ§î‡2J$e4c3d0f4-31ef-4c62-a92c-9f3ed128db7a
+n	java:S106›"+Replace this use of System.out by a logger.(…ÑÎ°8èÏ§î‡2J$d0a9692d-aa9b-47e3-a2f8-9a062b26ae33
+~
+java:S1854Ş":Remove this useless assignment to local variable "delete".(²ª±8íÏ§î‡2J$6a275c8a-e702-4ac0-a830-a84dce2ceec4
+o
+java:S1481Ş"+Remove this unused "delete" local variable.(²ª±8îÏ§î‡2J$50515caa-0471-4412-babe-7738bc22eff3

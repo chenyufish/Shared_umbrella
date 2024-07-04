@@ -1,17 +1,17 @@
 
 ’
-java:S1192D"VDefine a constant instead of duplicating this literal "æœåŠ¡å™¨å¤„ç†å¼‚å¸¸" 6 times.(†˜ê•J$fa16a0ce-61a2-4589-afcd-756308af68cb
+java:S1192D"VDefine a constant instead of duplicating this literal "æœåŠ¡å™¨å¤„ç†å¼‚å¸¸" 6 times.(†˜ê•J$dee5fd57-adc6-4f48-b71e-f359bb3c1568
 •
-java:S1192†"SDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒå¤±è´¥" 4 times.(Ë…Ï‡ùÿÿÿÿJ$11837141-4a4c-455f-86c6-c84784602fcf
+java:S1192†"SDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒå¤±è´¥" 4 times.(Ë…Ï‡ùÿÿÿÿJ$7872637b-1f1a-4026-aa4f-098e286df2df
 —
-java:S1192@"VDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒæœªé€šè¿‡" 3 times.(åù«ëÿÿÿÿÿJ$079cf663-e87f-400b-a085-efa38232516a
+java:S1192@"VDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒæœªé€šè¿‡" 3 times.(åù«ëÿÿÿÿÿJ$fc3136f1-6bdf-444a-ad9e-a5d3da082980
 w
-java:S1854˜"5Remove this useless assignment to local variable "i".(…ÚÇşÿÿÿÿJ$9ccd206d-1a48-4be8-b59f-d60f1103a4d2
+java:S1854˜"5Remove this useless assignment to local variable "i".(…ÚÇşÿÿÿÿJ$2c6e9319-e9be-46fb-8ddb-26619b4ea343
 h
-java:S1481˜"&Remove this unused "i" local variable.(…ÚÇşÿÿÿÿJ$c575a7d6-57ef-4d16-abb5-a3b4f3dbc646
+java:S1481˜"&Remove this unused "i" local variable.(…ÚÇşÿÿÿÿJ$c190cf93-61f6-4078-9ec3-18b7e6a46c37
 Z
-java:S2119½"Save and re-use this "Random".(¼İÅfJ$a6d24d94-37ed-46f5-b2e3-88e99f5e4c4d
+java:S2119½"Save and re-use this "Random".(¼İÅfJ$2dfb0cb8-58d7-4797-ab57-d7daf5ff1014
 w
-java:S1854ô"5Remove this useless assignment to local variable "i".(©øñ¡şÿÿÿÿJ$c7e7f7fe-997b-4832-b68b-fb29a609ce09
+java:S1854ô"5Remove this useless assignment to local variable "i".(©øñ¡şÿÿÿÿJ$868c1801-770c-460c-8dd5-f885c514facd
 h
-java:S1481ô"&Remove this unused "i" local variable.(©øñ¡şÿÿÿÿJ$d68fa425-714a-415e-bacd-43ce31451901
+java:S1481ô"&Remove this unused "i" local variable.(©øñ¡şÿÿÿÿJ$65575b61-17d2-4c37-954b-f6413eabba28

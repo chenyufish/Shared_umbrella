@@ -36,4 +36,6 @@ public class User {
     private String uAddress;
     @TableField("uLevel")
     private Integer uLevel;
+
+
 }

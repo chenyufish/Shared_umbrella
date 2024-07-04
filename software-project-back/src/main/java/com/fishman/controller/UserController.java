@@ -14,6 +14,7 @@ import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +41,38 @@ public class UserController {
         this.jwtUtil = jwtUtil;
         this.currentUserService = currentUserService;
     }
+    @ApiOperation(value = "获取当前用户", notes = "发送request请求")
+    @PostMapping(value = "/getLoginUser")
+    public User getLoginUser(HttpServletRequest request) {
+        try {
+            // 从请求头中获取 token
+            String token = request.getHeader("Authorization");
+            if (token == null || !token.startsWith("fishman ")) {
+                throw new RuntimeException("Token is missing or invalid");
+            }
+
+            // 去掉 "fishman " 前缀
+            token = token.substring(7);
+
+            // 验证 token 并获取用户 email
+            String email = jwtUtil.getPromptFromToken(token);
+            if (email == null ) {
+                throw new RuntimeException("验证信息已失效");
+            }
+
+            // 根据 email 获取用户信息
+            User user = userService.queryUser(email);
+            if (user == null) {
+                throw new RuntimeException("当前用户已失效");
+            }
+
+            return user;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("无法获取用户信息");
+        }
+    }
+
 
     @ApiOperation(value = "登录",notes = "通过传入邮箱和密码进行登录")
     @PostMapping(value = "/login")

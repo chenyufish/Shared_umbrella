@@ -104,5 +104,4 @@ public class UserService {
     public int delete(User user){
         return userMapper.deleteById(user);
     }
-
 }
