@@ -1,17 +1,17 @@
 
-l
-java:S1192D"VDefine a constant instead of duplicating this literal "æœåŠ¡å™¨å¤„ç†å¼‚å¸¸" 6 times.(†˜ê•
-o
-java:S1192†"SDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒå¤±è´¥" 4 times.(Ë…Ï‡ùÿÿÿÿ
-q
-java:S1192@"VDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒæœªé€šè¿‡" 3 times.(åù«ëÿÿÿÿÿ
-Q
-java:S1854˜"5Remove this useless assignment to local variable "i".(…ÚÇşÿÿÿÿ
-B
-java:S1481˜"&Remove this unused "i" local variable.(…ÚÇşÿÿÿÿ
-4
-java:S2119½"Save and re-use this "Random".(¼İÅf
-Q
-java:S1854ô"5Remove this useless assignment to local variable "i".(©øñ¡şÿÿÿÿ
-B
-java:S1481ô"&Remove this unused "i" local variable.(©øñ¡şÿÿÿÿ
+’
+java:S1192D"VDefine a constant instead of duplicating this literal "æœåŠ¡å™¨å¤„ç†å¼‚å¸¸" 6 times.(†˜ê•J$fa16a0ce-61a2-4589-afcd-756308af68cb
+•
+java:S1192†"SDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒå¤±è´¥" 4 times.(Ë…Ï‡ùÿÿÿÿJ$11837141-4a4c-455f-86c6-c84784602fcf
+—
+java:S1192@"VDefine a constant instead of duplicating this literal "èº«ä»½æ ¡éªŒæœªé€šè¿‡" 3 times.(åù«ëÿÿÿÿÿJ$079cf663-e87f-400b-a085-efa38232516a
+w
+java:S1854˜"5Remove this useless assignment to local variable "i".(…ÚÇşÿÿÿÿJ$9ccd206d-1a48-4be8-b59f-d60f1103a4d2
+h
+java:S1481˜"&Remove this unused "i" local variable.(…ÚÇşÿÿÿÿJ$c575a7d6-57ef-4d16-abb5-a3b4f3dbc646
+Z
+java:S2119½"Save and re-use this "Random".(¼İÅfJ$a6d24d94-37ed-46f5-b2e3-88e99f5e4c4d
+w
+java:S1854ô"5Remove this useless assignment to local variable "i".(©øñ¡şÿÿÿÿJ$c7e7f7fe-997b-4832-b68b-fb29a609ce09
+h
+java:S1481ô"&Remove this unused "i" local variable.(©øñ¡şÿÿÿÿJ$d68fa425-714a-415e-bacd-43ce31451901

@@ -41,6 +41,11 @@ public class Order {
 
     @TableField("bId")
     private Integer bId;
+    /**
+     * 租借地址
+     */
+    @TableField("dAddress")
+    private String dAddress;
 
 
 }

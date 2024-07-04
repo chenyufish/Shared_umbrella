@@ -71,7 +71,6 @@ public class OrderService {
             wp.eq("dStatue",order.getDStatue());
         }
         wp.eq("bId",order.getBId());
-        wp.like("dId",order.getDId());
         return orderMapper.selectPage(orderPage,wp);
     }
 
